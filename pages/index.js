@@ -68,7 +68,7 @@ export const getServerSideProps = async (context) => {
   let posts = null;
   if (req) {
     host = req.headers.referer;
-    const res = await fetch(`https://jsonplaceholder.typicode.com/todos`);
+    const res = await fetch(`${host}api/posts`);
     posts = await res.json();
   }
 
